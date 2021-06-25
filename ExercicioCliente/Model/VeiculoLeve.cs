@@ -83,19 +83,18 @@ namespace Model
             return veiculoLeve;
         }
 
-        public bool VerificaNuloVeiculoLeve(
-            string tMarca,
-            string tModelo,
-            int tAno,
-            double tPreco,
-            string tCor
-        ) {
-            if (String.IsNullOrEmpty(tMarca) && String.IsNullOrEmpty(tModelo) && String.IsNullOrEmpty(tAno) 
-                && String.IsNullOrEmpty(tPreco) && String.IsNullOrEmpty(tCor))
+        public bool VerificaVeiculoLeve(
+                string Marca,
+                string Modelo,
+                int Ano,
+                double Preco,
+                string Cor
+            ) {
+                if (String.IsNullOrEmpty(Marca) || String.IsNullOrEmpty(Modelo) || String.IsNullOrEmpty(Convert.ToString(Ano)) || String.IsNullOrEmpty(Convert.ToString(Preco)) || String.IsNullOrEmpty(Cor)) 
             {
-                return false;
-            } else {
                 return true;
+            } else {
+                return false;
             }
         }
     }

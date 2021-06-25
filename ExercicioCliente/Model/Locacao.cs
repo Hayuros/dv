@@ -142,5 +142,23 @@ namespace Model
             Context.locacoes.Remove(locacao);
             return locacao;
         }
+
+        public bool CalculoValorLocacao(int DiasRetorno, int Preco ) {
+            if ((DiasRetorno * Preco) != 0)
+            {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        public bool CalculoDataDevolucao(int DataLocacao, int DiasRetorno) {
+            if ((DataLocacao + DiasRetorno) != 0)
+            {
+                return false;
+            } else {
+                return true;
+            }
+        }
     }//Término da classe Locação.
 }

@@ -72,7 +72,7 @@ namespace TelaCliente
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Está exclusão não foi permitida/Id Inválido.");
+                    MessageBox.Show($"Está exclusão não foi permitida/Id Inválido. "+ex);
                 }
             } else if (resultado == DialogResult.No)
             {
