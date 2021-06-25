@@ -82,5 +82,21 @@ namespace Model
             Context.veiculosLeves.Remove(veiculoLeve);
             return veiculoLeve;
         }
+
+        public bool VerificaNuloVeiculoLeve(
+            string tMarca,
+            string tModelo,
+            int tAno,
+            double tPreco,
+            string tCor
+        ) {
+            if (String.IsNullOrEmpty(tMarca) && String.IsNullOrEmpty(tModelo) && String.IsNullOrEmpty(tAno) 
+                && String.IsNullOrEmpty(tPreco) && String.IsNullOrEmpty(tCor))
+            {
+                return false;
+            } else {
+                return true;
+            }
+        }
     }
 }
